@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybermodel | John P. Linkowsky</title>
+    <!-- We load 'Fira Code' and 'Share Tech Mono' for a professional, technical cyber vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        /* This section contains all the styling (CSS) to make your page look great. */
+        :root {
+            /* These are our colors. We're using deep, dark grays with a subtle blue accent for that sleek, professional tech vibe. */
+            --bg-color: #0b0f19;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-color: #3b82f6; 
+            --card-bg: #1f2937;
+            --card-border: #374151;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            /* This centers the content perfectly on the screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 2.5rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            /* A soft shadow to make the card "float" */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            /* A smooth fade-in animation when the page loads */
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 400;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        /* A small accent dot before the section title */
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .interests {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .interest-tag {
+            background-color: #111827;
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            /* This makes changes happen smoothly over 0.3 seconds */
+            transition: all 0.3s ease; 
+            cursor: pointer;
+        }
+
+        /* Interactive Element: When you hover over an interest tag, it shifts up slightly, glows, and changes color */
+        .interest-tag:hover {
+            color: #ffffff;
+            border-color: var(--accent-color);
+            background-color: rgba(59, 130, 246, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+
+        .action-area {
+            text-align: center;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--accent-color);
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        /* Button Hover Effect: Button fills in with color and pops out */
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header area for your name and tagline -->
+        <header>
+            <img src="logo.png" alt="Cybermodel Logo" class="logo">
+            <h1>Cybermodel</h1>
+            <p style="font-family: 'Share Tech Mono', monospace; font-size: 1.5rem; font-weight: 400; color: var(--text-main); margin-bottom: 0.25rem;">John P. Linkowsky</p>
+            <p class="tagline">Cybersecurity Engineer & College Professor</p>
+        </header>
+
+        <!-- A clean interactive button at the bottom -->
+        <div class="action-area">
+            <a href="https://www.linkedin.com/in/johnlinkowsky" target="_blank" class="btn">Connect on LinkedIn</a>
+        </div>
+    </div>
+
+</body>
+</html>
